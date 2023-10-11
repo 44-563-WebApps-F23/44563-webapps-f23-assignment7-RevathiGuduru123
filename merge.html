@@ -46,8 +46,8 @@
 
 </body>
 <script>
-    
-        function addEnd(){
+
+    function addEnd() {
         let element = document.createElement("div")
         element.innerHTML = document.getElementById("inputElement").value
         element.style.color = "green"
@@ -55,16 +55,16 @@
 
         let container = document.getElementById('target')
         container.appendChild(element)
-		
-	}
-        function remove(){
-            let queueItems = document.getElementsByClassName("merger")
-            let length_element = queueItems.length
-            if(length_element > 0){
-                queueItems[length_element - 1].remove()
+
+    }
+    function remove() {
+        let queueItems = document.getElementsByClassName("merger")
+        let length_element = queueItems.length
+        if (length_element > 0) {
+            queueItems[length_element - 1].remove()
         }
     }
-        function addFront() {
+    function addFront() {
         let element = document.createElement("div");
         element.innerHTML = document.getElementById("inputElement").value;
         element.style.color = "yellow";
@@ -73,5 +73,7 @@
         let container = document.getElementById("target");
         container.insertBefore(element, container.firstChild);
     }
+    
 </script>
+
 </html>
