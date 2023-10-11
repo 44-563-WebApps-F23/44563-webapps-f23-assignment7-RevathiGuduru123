@@ -76,7 +76,6 @@
                         height="150" width="150"></div>
             </div>
 
-            <!--Row 2-->
             <div class="row mb-1">
                 <div class="col-md"><img id="img5" src="treasure-map.jpg" alt="Treasure Place" onclick="check(5)"
                         height="150" width="150"></div>
@@ -200,11 +199,30 @@
                 document.getElementById(ids[i]).src = "treasure-map.jpg";
             }
         }
-        
-        
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        trapLocation = getRandomNumber(0, 24);
+        treasureLocation = getRandomNumber(0, 24);
+
+        function newGame() {
+           
+            trapLocation = getRandomNumber(0, 24);
+            treasureLocation = getRandomNumber(0, 24);
+            locationsChecked = 0;
+            penalty = 0;
+            document.getElementById("counter").innerHTML = "Count: 0";
+            document.getElementById("penalty").innerHTML = "Penalty: 0";
+            document.getElementById("target").innerHTML = "Your time";
+        }
+
+        document.getElementById("newGame").onclick = newGame;
+
+
 
     </script>
-        
+
 </body>
 
 </html>
