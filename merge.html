@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge</title> 
+<style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: rgb(0, 0, 255);
+  }
+
+.flex-container > div {  
+  background-color: #FF7F50; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: rgb(83, 0, 128);
+	  }
+	}
+</style>
+</head>
+
+<body>
+    <h2>Guduru Revathi builds a merger</h2>
+        <input type="text" class="form-control" id="inputElement">
+        <br>
+        <br>
+		<div class="flex-container" id="target">
+		  <div class="merger">row item 1</div>   
+		  <div class="merger">row item 2</div>  
+		  <div class="merger">row item 3</div>  
+		</div>
+	
+	<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="addEnd()">Add end</button>
+        <button onclick="addFront()">Add Front</button>
+        <button onclick="remove()">Remove</button>
+	
+	
+</body>
+</html>	
