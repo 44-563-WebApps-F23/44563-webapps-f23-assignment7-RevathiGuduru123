@@ -7,7 +7,7 @@
         .flex-container {
             display: flex;
             flex-direction: row;
-            background-color: rgb(0, 0, 255);
+            background-color: rgba(255, 0, 0, 0.201);
         }
 
         .flex-container>div {
@@ -27,21 +27,21 @@
 </head>
 
 <body>
-    <h3>Guduru Revathi builds a merger</h3>
+    <h1 style="background-color: blueviolet;">Guduru Revathi builds a merger</h1>
     <input type="text" class="form-control" id="inputElement">
     <br>
     <br>
     <div class="flex-container" id="target">
-        <div class="merger">row item 1</div>
-        <div class="merger">row item 2</div>
-        <div class="merger">row item 3</div>
+        <div class="merger" style="background-color: aquamarine;">row item 1</div>
+        <div class="merger" style="background-color: aquamarine;">row item 2</div>
+        <div class="merger" style="background-color: aquamarine;">row item 3</div>
     </div>
 
     <p> Press the button to create an new element of type div and then add it to the container.
     </p>
-    <button onclick="addEnd()">Add end</button>
-    <button onclick="addFront()">Add Front</button>
-    <button onclick="remove()">Remove</button>
+    <button onclick="addEnd()" style="background-color:orchid;">Add end</button>
+    <button onclick="addFront()" style="background-color:orchid;">Add Front</button>
+    <button onclick="remove()" style="background-color:orchid;">Remove</button>
 
 
 </body>
