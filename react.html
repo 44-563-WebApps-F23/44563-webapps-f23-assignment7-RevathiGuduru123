@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>React</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <title>react</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </head>
-<style>
-    button {
-        background-color:rgb(255, 0, 144);
-    }
-</style>
 
 <body>
+  
+  <h2>Bhanu Venkata Siva Kumar Gorantla speed check</h2>
+  <div id="target">Your time</div>
+  <div id="counter">Count</div>
+  <div id="countdown"></div>
+  <button id="startButton">Start Timer</button>
+  <button id="reactButton">React</button>
 
-    <h3 style="background-color:rgb(30, 210, 123);">Guduru Revathi speed check</h3>
+  <script>
 
-    <div id="target" style="color: rgb(143, 131, 2);">Your time </div>
-    <div id="counter" style="color: rgb(0, 109, 139);">Count </div>
-
-    <button type="button" onclick="startTime()">Start Timer</button>
-    <button type="button" onclick="recordTime()">React</button>
+    let reactTime = undefined;
 
 
-    <script>
-        var reactTime = undefined;
-        function recordTime() {
-            reactTime = Date.now();
-            console.log(reactTime);
+    function recordTime() {
+      reactTime = Date.now();
+      console.log(reactTime);
+    }
+
+    document.getElementById("reactButton").onclick = recordTime;
+
+    //part6 
+
+    function startTime() {
+
+      for (let i = 0; i < 9; i++) {
+        setTimeout(function () {
+          document.getElementById("countdown").innerHTML = i;
+
+        }, (8 - i) * 1000);
+      }
+
+      setTimeout(function () {
+
+        if (reactTime === undefined) {
+          document.getElementById("target").innerHTML = " Too Slow";
+        } else {
+          const endTime = Date.now();
+          const reaction = (endTime - reactTime)
+          document.getElementById("target").innerHTML = "Time was " + reaction.toFixed(3) + "Miliseconds";
         }
-        function startTime() {
-            var i = 0;
-            while (i <= 8) {
-                setTimeout(() => {
-                    document.getElementById("counter").innerHTML = "Count :" + i;
-                }, (8 - i) * 1000);
-                i++;
+      }, 8000);
+    }
 
-            }
-            setTimeout(() => {
-                if (reactTime == undefined) {
-                    document.getElementById("target").innerHTML = "Too Slow";
-                }
-                else {
-                    var endTime = Date.now();
-                    document.getElementById("target").innerHTML = "Timewas " + (endTime - reactTime);
-                }
-            }, 8000);
-        }
+    document.getElementById("startButton").onclick = startTime;
+  
 
-    </script>
-
+    
+  </script>
 </body>
-
 </html>
