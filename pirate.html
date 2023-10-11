@@ -123,6 +123,83 @@
     </div>
 </div>
 
+<script>
+    let ids = new Array();
+    for (i = 0; i < 25; i++) {
+        ids.push(i);
+    }
+    let checkCount = 0;
+    let penalty = 0;
+    let lastCheck = 0;
+    let treasureLocation = 5;
+    let trapLocation = 18;
+    let gameOver = false;
+
+    function check(position) {
+        if (gameOver) {
+            return;
+        }
+        let id = ids[position];
+        let imgElement = document.getElementById(id);
+        if (position === treasureLocation) {
+            imgElement.src = 'Treasure.jpg';
+        } else if (position === trapLocation) {
+            imgElement.src = 'Trap.jpg';
+        }
+        else {
+            imgElement.src = 'pirate.jpg';
+        }
+        if (position == treasureLocation) {
+            gameOver = true;
+            penalty -= 3;
+        }
+        else if (position == trapLocation) {
+            gameOver = true;
+            penalty += 4;
+        }
+        checkCount++;
+        penalty++;
+        document.getElementById('locations').textContent = checkCount;
+        document.getElementById('penalty').textContent = penalty;
+        lastCheck = position;
+
+    }
+    function help() {
+        if (gameOver) {
+            return;
+        }
+        let treasureRow = Math.floor(treasureLocation / 5);
+        let treasureCol = treasureLocation % 5;
+        let lastRow = Math.floor(lastCheck / 5);
+        let lastCol = lastCheck % 5;
+
+
+        let rowDiff = Math.abs(treasureRow - lastRow);
+        let colDiff = Math.abs(treasureCol - lastCol);
+
+
+        if ((rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1)) {
+            document.getElementById('help').textContent = 'can smell it';
+        } else if (rowDiff + colDiff === 2) {
+            document.getElementById('help').textContent = 'Close Matie';
+
+        } else {
+            document.getElementById('help').textContent = 'StepFaster';
+        }
+        penalty += 2;
+        document.getElementById('penalty').textContent = "penalty is " + penalty;
+        document.getElementById('help').textContent = text;
+
+    }
+   
+    document.getElementById("locations").textContent = "Number of locations checked is 0";
+    document.getElementById("penalty").textContent = "penalty is 0";
+    document.getElementById("help").textContent = "click for help";
+
+
+
+</script>
+
 
 </body>
 </html>
