@@ -14,99 +14,95 @@
 
 </head>
 <body>
-    <!--Part 2-->
     <h1 class="text-">Find the treasure by Guduru Revathi</h1>
-    <div style="padding: 10px;">
-        <p>Click on the locations to search for treasure, beware the traps.</p>
-        <p id="locations" class="alert alert-info" style="width: 20rem;">Number of locations checked is zero.</p>
-        <p id="penalty" class="alert alert-warning" style="width: 10rem;">Penalty is zero.</p>
-        <p class="alert alert-primary" style="width: 10rem;" onclick="help()">Click for help.</p>
-        <p id="help" class="alert alert-success" style="width: 10rem;">Help report.</p>
+    <div style="padding: 20px;">
+        <p style="background-color: yellowgreen;">Click on the locations and find the trasure and be aware of traps</p>
+        <p id="locations"  style="width: 20rem;">Number of locations checked is 0.</p>
+        <p id="penalty"  style="width: 10rem;">Penalty is 0.</p>
+        <p style="width: 10rem;" onclick="help()">Click for help.</p>
+        <p id="help" style="width: 10rem;">Help report.</p>
     </div>
 
-    <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
+
   
-    
-    <!--Part 3-->
     <div class="Container" style="padding-left: 150px; padding-right: 150px;">
         <div class="row">
-            <!--Row 1-->
             <div class="row mb-1">
-                <div class="col-md"><img id="image0" src="treasure-map.jpg" alt="Treasure Place" onclick="check(0)"
+                <div class="col-md"><img id="img0" src="treasure-map.jpg" alt="Treasure Place" onclick="check(0)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image1" src="treasure-map.jpg" alt="Treasure Place" onclick="check(1)"
+                <div class="col-md"><img id="img1" src="treasure-map.jpg" alt="Treasure Place" onclick="check(1)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image2" src="treasure-map.jpg" alt="Treasure Place" onclick="check(2)"
+                <div class="col-md"><img id="img2" src="treasure-map.jpg" alt="Treasure Place" onclick="check(2)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image3" src="treasure-map.jpg" alt="Treasure Place" onclick="check(3)"
+                <div class="col-md"><img id="img3" src="treasure-map.jpg" alt="Treasure Place" onclick="check(3)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image4" src="treasure-map.jpg" alt="Treasure Place" onclick="check(4)"
+                <div class="col-md"><img id="img4" src="treasure-map.jpg" alt="Treasure Place" onclick="check(4)"
                         height="150" width="150"></div>
             </div>
 
             <!--Row 2-->
             <div class="row mb-1">
-                <div class="col-md"><img id="image5" src="treasure-map.jpg" alt="Treasure Place" onclick="check(5)"
+                <div class="col-md"><img id="img5" src="treasure-map.jpg" alt="Treasure Place" onclick="check(5)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image6" src="treasure-map.jpg" alt="Treasure Place" onclick="check(6)"
+                <div class="col-md"><img id="img6" src="treasure-map.jpg" alt="Treasure Place" onclick="check(6)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image7" src="treasure-map.jpg" alt="Treasure Place" onclick="check(7)"
+                <div class="col-md"><img id="img7" src="treasure-map.jpg" alt="Treasure Place" onclick="check(7)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image8" src="treasure-map.jpg" alt="Treasure Place" onclick="check(8)"
+                <div class="col-md"><img id="img8" src="treasure-map.jpg" alt="Treasure Place" onclick="check(8)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image9" src="treasure-map.jpg" alt="Treasure Place" onclick="check(9)"
-                        height="150" width="150"></div>
-            </div>
-
-            <!--Row 3-->
-            <div class="row mb-1">
-                <div class="col-md"><img id="image10" src="treasure-map.jpg" alt="Treasure Place" onclick="check(10)"
-                        height="150" width="150"></div>
-                <div class="col-md"><img id="image11" src="treasure-map.jpg" alt="Treasure Place" onclick="check(11)"
-                        height="150" width="150"></div>
-                <div class="col-md"><img id="image12" src="treasure-map.jpg" alt="Treasure Place" onclick="check(12)"
-                        height="150" width="150"></div>
-                <div class="col-md"><img id="image13" src="treasure-map.jpg" alt="Treasure Place" onclick="check(13)"
-                        height="150" width="150"></div>
-                <div class="col-md"><img id="image14" src="treasure-map.jpg" alt="Treasure Place" onclick="check(14)"
+                <div class="col-md"><img id="img9" src="treasure-map.jpg" alt="Treasure Place" onclick="check(9)"
                         height="150" width="150"></div>
             </div>
 
-            <!--Row 4-->
+            
             <div class="row mb-1">
-                <div class="col-md"><img id="image15" src="treasure-map.jpg" alt="Treasure Place" onclick="check(15)"
+                <div class="col-md"><img id="img10" src="treasure-map.jpg" alt="Treasure Place" onclick="check(10)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image16" src="treasure-map.jpg" alt="Treasure Place" onclick="check(16)"
+                <div class="col-md"><img id="img11" src="treasure-map.jpg" alt="Treasure Place" onclick="check(11)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image17" src="treasure-map.jpg" alt="Treasure Place" onclick="check(17)"
+                <div class="col-md"><img id="img12" src="treasure-map.jpg" alt="Treasure Place" onclick="check(12)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image18" src="treasure-map.jpg" alt="Treasure Place" onclick="check(18)"
+                <div class="col-md"><img id="img13" src="treasure-map.jpg" alt="Treasure Place" onclick="check(13)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image19" src="treasure-map.jpg" alt="Treasure Place" onclick="check(19)"
+                <div class="col-md"><img id="img14" src="treasure-map.jpg" alt="Treasure Place" onclick="check(14)"
                         height="150" width="150"></div>
             </div>
 
-            <!--Row 5-->
+            
             <div class="row mb-1">
-                <div class="col-md"><img id="image20" src="treasure-map.jpg" alt="Treasure Place" onclick="check(20)"
+                <div class="col-md"><img id="img15" src="treasure-map.jpg" alt="Treasure Place" onclick="check(15)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image21" src="treasure-map.jpg" alt="Treasure Place" onclick="check(21)"
+                <div class="col-md"><img id="img16" src="treasure-map.jpg" alt="Treasure Place" onclick="check(16)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image22" src="treasure-map.jpg" alt="Treasure Place" onclick="check(22)"
+                <div class="col-md"><img id="img17" src="treasure-map.jpg" alt="Treasure Place" onclick="check(17)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image23" src="treasure-map.jpg" alt="Treasure Place" onclick="check(23)"
+                <div class="col-md"><img id="img18" src="treasure-map.jpg" alt="Treasure Place" onclick="check(18)"
                         height="150" width="150"></div>
-                <div class="col-md"><img id="image24" src="treasure-map.jpg" alt="Treasure Place" onclick="check(24)"
+                <div class="col-md"><img id="img19" src="treasure-map.jpg" alt="Treasure Place" onclick="check(19)"
+                        height="150" width="150"></div>
+            </div>
+
+            
+            <div class="row mb-1">
+                <div class="col-md"><img id="img20" src="treasure-map.jpg" alt="Treasure Place" onclick="check(20)"
+                        height="150" width="150"></div>
+                <div class="col-md"><img id="img21" src="treasure-map.jpg" alt="Treasure Place" onclick="check(21)"
+                        height="150" width="150"></div>
+                <div class="col-md"><img id="img22" src="treasure-map.jpg" alt="Treasure Place" onclick="check(22)"
+                        height="150" width="150"></div>
+                <div class="col-md"><img id="img23" src="treasure-map.jpg" alt="Treasure Place" onclick="check(23)"
+                        height="150" width="150"></div>
+                <div class="col-md"><img id="img24" src="treasure-map.jpg" alt="Treasure Place" onclick="check(24)"
                         height="150" width="150"></div>
             </div>
         </div>
     </div>
     <script>
-        var ids = ["image0", "image1", "image2", "image3", "image4", 
-                    "image5", "image6", "image7", "image8", "image9", 
-                    "image10", "image11", "image12", "image13", "image14", 
-                    "image15", "image16", "image17", "image18", "image19", 
-                    "image20", "image21", "image22", "image23", "image24"]
+        var ids = ["img0", "img1", "img2", "img3", "img4", 
+                    "img5", "img6", "img7", "img8", "img9", 
+                    "img10", "img11", "img12", "img13", "img14", 
+                    "img15", "img16", "img17", "img18", "img19", 
+                    "img20", "img21", "img22", "img23", "img24"]
 
         var checkCount = 0;
         var penalty = 0;
@@ -127,7 +123,7 @@
                     penalty = penalty + 4;
                 }
                 else {
-                    document.getElementById(ids[position]).setAttribute("src", "Pirates.jpg");
+                    document.getElementById(ids[position]).setAttribute("src", "pirate.jpg");
                     penalty = penalty + 1;
                 }
                 checkCount++;
